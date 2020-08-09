@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <p>Vue example</p>
+
+    <div id="app">
+
+        <h2>{{ count }}</h2>
+
+        <button class="button is-danger" @click.prevent="incrementCounter">Count Up</button>
+        <button class="button is-danger" @click.prevent="decrementCounter">Count Down</button>
+
+    </div>
+
+
+    <script>
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                count: 0,
+            },
+
+            methods: {
+                incrementCounter: function () {
+                    this.count += 1;
+                },
+
+                decrementCounter: function () {
+                    this.count += -1;
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
